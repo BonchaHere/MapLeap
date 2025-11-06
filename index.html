@@ -1,12 +1,211 @@
 <!doctype html>
-<html>
-  <head><meta charset="utf-8"><title>MapLeap – Policies</title></head>
-  <body style="font-family:sans-serif;">
-    <h1>MapLeap – Legal & Policies</h1>
-    <ul>
-      <li><a href="privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="data-deletion.html">Data Deletion</a></li>
-      <li><a href="app-ads.txt">App-ads.txt</a></li>
-    </ul>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MapLeap – Explore the World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#42A5F5" />
+  <link href="https://fonts.googleapis.com/css2?family=Bubble+Gum+Sans&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --riverBlue:#42A5F5; --goldenSand:#F5C542; --lotusPink:#FF8A80;
+      --softWhite:#F5F6F5; --slateGray:#455A64;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--softWhite);color:#222;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;}
+    .brand{font-family:"Bubble Gum Sans",system-ui;font-weight:400;letter-spacing:.5px}
+    header{
+      position:sticky;top:0;z-index:50;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.06)
+    }
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+    .nav{display:flex;align-items:center;gap:18px;justify-content:space-between}
+    .logo{display:flex;align-items:center;gap:10px}
+    .logo-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--riverBlue),var(--goldenSand));box-shadow:0 6px 16px rgba(66,165,245,.35)}
+    .nav a{color:var(--slateGray);text-decoration:none;font-weight:600}
+    .nav a:hover{color:#111}
+    .cta{background:var(--riverBlue);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+    .cta:hover{opacity:.92}
+    .hero{
+      background:
+        radial-gradient(1200px 400px at 80% -10%, rgba(66,165,245,.20), transparent 60%),
+        radial-gradient(600px 240px at 10% 0%, rgba(245,197,66,.18), transparent 60%),
+        linear-gradient(180deg,#fff, #f9fbff 70%, var(--softWhite) 100%);
+      border-bottom:1px solid #eef2f6;
+    }
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:36px 20px}
+    .hero h1{font-size:42px;margin:0 0 10px;line-height:1.1;color:#0f172a}
+    .hero p{font-size:18px;color:#334155;margin:0 0 18px}
+    .pill{
+      display:inline-block;background:#fff;border:1px solid #e5e7eb;border-radius:999px;padding:6px 12px;
+      box-shadow:0 3px 12px rgba(0,0,0,.06);margin-bottom:12px;color:#0f172a;font-weight:700
+    }
+    .feature-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:28px 0}
+    .card{
+      background:#fff;border:1px solid #eef2f6;border-radius:18px;padding:16px;
+      box-shadow:0 8px 24px rgba(17,24,39,.04)
+    }
+    .card h3{margin:0 0 8px;font-size:18px}
+    .card p{margin:0;color:#475569}
+    .illus{
+      aspect-ratio:4/3;border-radius:22px;border:1px dashed #e5e7eb;background:
+        repeating-linear-gradient(45deg, rgba(66,165,245,.08), rgba(66,165,245,.08) 12px, transparent 12px, transparent 24px),
+        #fff;
+      display:grid;place-items:center;color:#64748b;font-weight:600
+    }
+
+    .section{padding:36px 20px}
+    .section h2{margin:0 0 14px;font-size:28px}
+    .muted{color:#64748b}
+
+    /* Screenshots grid */
+    .grid{
+      display:grid;gap:14px;grid-template-columns:repeat(4,1fr)
+    }
+    .shot{
+      background:#fff;border:1px solid #e5e7eb;border-radius:16px;overflow:hidden;display:block;text-decoration:none;color:inherit
+    }
+    .shot img{width:100%;height:180px;object-fit:cover;display:block}
+    .shot span{display:block;padding:10px 12px;font-size:14px;color:#334155}
+
+    /* How to play */
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .step{background:#fff;border:1px solid #e5e7eb;border-radius:18px;padding:16px}
+    .step .num{
+      width:34px;height:34px;border-radius:10px;background:var(--goldenSand);
+      display:grid;place-items:center;font-weight:800;color:#4a3b00;margin-bottom:8px
+    }
+
+    /* Footer */
+    footer{background:#0b1220;color:#cbd5e1;margin-top:36px}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:28px 20px}
+    footer a{color:#e2e8f0;text-decoration:none}
+    footer a:hover{text-decoration:underline}
+    .copyright{border-top:1px solid rgba(255,255,255,.08);padding:12px 20px;color:#94a3b8;font-size:14px}
+
+    /* Responsiveness */
+    @media (max-width:960px){
+      .hero-inner{grid-template-columns:1fr}
+      .feature-cards{grid-template-columns:1fr 1fr}
+      .grid{grid-template-columns:1fr 1fr}
+      .steps{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="logo">
+        <div class="logo-badge" aria-hidden="true"></div>
+        <div class="brand" style="font-size:20px">MapLeap</div>
+      </div>
+      <nav class="brand" style="font-size:18px">
+        <a href="index.html">Home</a>
+        <a href="privacy-policy.html">Privacy</a>
+        <a href="data-deletion.html">Data Deletion</a>
+        <a class="cta" href="app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="pill brand">Family-friendly Geography Quiz</span>
+        <h1 class="brand">Explore maps. Master countries. Have fun.</h1>
+        <p>Two modes—<strong>Country Quest</strong> &amp; <strong>Carto Puzzle</strong>—with mic hints, rewards, and leaderboards. Learn the world, one tap at a time.</p>
+        <div style="display:flex;gap:10px;margin-top:12px">
+          <!-- Replace # with your real store links when ready -->
+          <a class="cta" href="#" aria-label="Get on Google Play">Get on Google Play</a>
+          <a class="cta" style="background:var(--lotusPink)" href="#" aria-label="Get on App Store">Get on App Store</a>
+        </div>
+        <div class="feature-cards" aria-label="Highlights">
+          <div class="card">
+            <h3 class="brand">Mic Help</h3>
+            <p>Use voice hints to nudge the right answer—great for younger explorers.</p>
+          </div>
+          <div class="card">
+            <h3 class="brand">Leaderboards</h3>
+            <p>Climb the global ranks and challenge friends.</p>
+          </div>
+          <div class="card">
+            <h3 class="brand">Rewards</h3>
+            <p>Earn gems and unlock fun cosmetic surprises.</p>
+          </div>
+        </div>
+      </div>
+      <div class="illus">Hero Artwork / Gameplay Collage (placeholder)</div>
+    </div>
+  </main>
+
+  <section class="section">
+    <div class="wrap">
+      <h2 class="brand">Gameplay Screenshots</h2>
+      <p class="muted">Drop your images into <code>/assets/screenshots/</code> and update the <code>src</code> paths below.</p>
+      <div class="grid">
+        <a class="shot" href="assets/screenshots/shot1.png">
+          <img src="assets/screenshots/shot1.png" alt="Country Quest – question screen (placeholder)">
+          <span>Country Quest</span>
+        </a>
+        <a class="shot" href="assets/screenshots/shot2.png">
+          <img src="assets/screenshots/shot2.png" alt="Carto Puzzle – drag to map (placeholder)">
+          <span>Carto Puzzle</span>
+        </a>
+        <a class="shot" href="assets/screenshots/shot3.png">
+          <img src="assets/screenshots/shot3.png" alt="Leaderboard view (placeholder)">
+          <span>Leaderboard</span>
+        </a>
+        <a class="shot" href="assets/screenshots/shot4.png">
+          <img src="assets/screenshots/shot4.png" alt="Rewards & gems (placeholder)">
+          <span>Rewards</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="background:linear-gradient(180deg,#fff, #f7fbff)">
+    <div class="wrap">
+      <h2 class="brand">How to Play</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="num brand">1</div>
+          <h3 class="brand" style="margin:0 0 6px">Choose a Mode</h3>
+          <p>Pick <strong>Country Quest</strong> for rapid Q&amp;A or <strong>Carto Puzzle</strong> to drag countries to their correct spots.</p>
+        </div>
+        <div class="step">
+          <div class="num brand">2</div>
+          <h3 class="brand" style="margin:0 0 6px">Use Mic Hints</h3>
+          <p>Stuck? Tap the mic for a gentle hint. Great for early learners.</p>
+        </div>
+        <div class="step">
+          <div class="num brand">3</div>
+          <h3 class="brand" style="margin:0 0 6px">Climb the Ranks</h3>
+          <p>Win streaks = more points. Track your progress on the leaderboard and earn rewards.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-grid">
+      <div>
+        <div class="brand" style="font-size:22px;margin-bottom:6px">MapLeap</div>
+        <p class="muted" style="color:#b6c3d4">A playful geography adventure by Alaka Solutions.</p>
+      </div>
+      <div>
+        <div class="brand" style="font-size:18px;margin-bottom:8px">Legal</div>
+        <div><a href="privacy-policy.html">Privacy Policy</a></div>
+        <div><a href="data-deletion.html">Data Deletion</a></div>
+        <div><a href="app-ads.txt" target="_blank" rel="noopener">app-ads.txt</a></div>
+      </div>
+      <div>
+        <div class="brand" style="font-size:18px;margin-bottom:8px">Contact</div>
+        <div><a href="mailto:alaka.softwares@gmail.com">alaka.softwares@gmail.com</a></div>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="y"></span> Alaka Solutions. All rights reserved.
+    </div>
+  </footer>
+  <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
 </html>
