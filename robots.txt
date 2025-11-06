@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bonchahere.github.io/MapLeap/sitemap.xml
